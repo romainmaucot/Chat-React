@@ -4,7 +4,6 @@ import {MessageBar} from "./MessageBar";
 import styled from"styled-components";
 import {useSelector} from "react-redux";
 import {Redirect} from "react-router-dom";
-import {loadMessages} from "../actions/messages";
 
 
 const ChatDiv = styled.div`   
@@ -19,11 +18,6 @@ export const Chat = () => {
 
 
     const [messages, setMessages] = useState([]);
-
-    const handleFirstMessage = () => {
-        console.log(loadMessages.message);
-        setMessages([...messages, ]);
-    };
 
 
     const handleMessageSubmit = (message) => {
